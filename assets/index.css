@@ -1,16 +1,185 @@
+/* 1.  ESTILOS BASE= */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+
+/*  2. ESTRUCTURA PRINCIPAL con GRID */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f7fa;
-    color: #1f2937;
-    line-height: 1.6;
+    display: grid;
+    /* layout macro */
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    /* Header y Footer Main */
+    grid-template-rows: auto 1fr auto; 
+    min-height: 100vh;
 }
+
+/* Asignación */
+.header { grid-area: header; }
+.main-content { grid-area: main; }
+.footer { grid-area: footer; }
+
+.header {
+    border: 2px solid black;
+    padding: 1rem;
+    background-color: white;
+    
+
+    display: grid;
+    place-items: center; 
+    gap: 1rem;
+}
+
+.main-content { 
+    padding: 2rem; 
+}
+
+.footer { 
+    border: 2px solid black; 
+    height: 80px; 
+    background-color: white;
+}
+
+
+/*  3. COMPONENTES INTERNOS (FLEXBOX) */
+
+/* NAVBAR*/
+.navbar {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/*  TABS  */
+.tabs {
+    display: flex;
+    border: 2px solid black;
+    margin-bottom: 1rem;
+    background-color: white;
+}
+
+.tab {
+    flex: 1; 
+    flex-basis: 0; 
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    background: transparent;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*  (Tarjeta de Proyecto)  */
+.card-wrapper {
+    border: 2px solid black;
+    padding: 1rem;
+    background-color: white;
+}
+
+.card-content {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.card-image {
+    flex-basis: 200px;
+    flex-shrink: 0;  
+    height: 150px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    font-weight: bold;
+}
+
+.card-text {
+    flex-grow: 1; 
+}
+
+
+/*  4. MEDIA QUERIES (BREAKPOINTS MÓVILES/TABLET) con @media para breakpoints móviles/tablet */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+  
+    .card-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .card-image {
+        flex-basis: auto; 
+        width: 100%;
+    }
+}
+
+
+/*  5. CONTAINER QUERIES Y FALLBACK */
+
+/* 1. Definimos el contexto del contenedor */
+.card-wrapper {
+    container-type: inline-size;
+    container-name: card;
+}
+
+/* 2. Escribimos la regla basada en el tamaño del contenedor */
+@container card (max-width: 500px) {
+    .card-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .card-image {
+        flex-basis: auto;
+        width: 100%;
+    }
+    
+    .card-text h4 {
+        margin-top: 0.5rem;
+        color: darkblue; 
+    }
+}
+
+/* 3. Respaldo para container queries usamos media  */
+@supports not (container-type: inline-size) {
+    @media (max-width: 600px) {
+        .card-content {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .card-image {
+            flex-basis: auto;
+            width: 100%;
+        }
+        .card-text h4 {
+            margin-top: 0.5rem;
+            color: darkblue;
+        }
+    }
+ }
