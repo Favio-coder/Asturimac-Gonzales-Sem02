@@ -11,6 +11,10 @@ body {
     color: #333;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 /*  2. ESTRUCTURA PRINCIPAL con GRID */
 body {
@@ -178,4 +182,4 @@ body {
             color: darkblue;
         }
     }
-}
+ }
