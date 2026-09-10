@@ -8,22 +8,81 @@
     <link rel="stylesheet" href="assets/index.css">
 </head>
 <body>
-    <header>
-        <h1>Mi Portafolio Web</h1>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">
+                PORTAFOLIO
+            </a>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="#proyectos">Proyectos</a>
+                </li>
+
+                <li>
+                    <a href="#contacto">Contacto</a>
+                </li>
+
+            </ul>
+        </nav>
     </header>
 
     <main>
         <section
+            id="proyectos"
+            class="projects-section"
             data-category="Proyectos de software"
             data-source="xml"
         >
-            <h2>Proyectos</h2>
-            <p>Contenido para proyectos</p>
+            <h1>NUESTROS PROYECTOS</h1>
+
+            <div class="projects-container">
+                <div class="filters">
+                    <button data-category="Proyecto_1">
+                        Proyecto 1
+                    </button>
+
+                    <button data-category="Proyecto_2">
+                        Proyecto_2
+                    </button>
+
+                    <button data-category="Proyecto_3">
+                        Proyecto_3
+                    </button>
+                </div>
+            </div>
+
+
+            <article class="project-card">
+                <h2>PROYECTO 1</h2>
+
+                <div class="project-content">
+                    <div class="project-image">
+                        <span>IMAGEN</span>
+                    </div>
+
+                    <div class="project-info">
+
+                        <h3>SUBTÍTULO</h3>
+
+                        <p>
+                            DESCRIPCIÓN DEL PROYECTO
+                        </p>
+
+                    </div>
+                </div>
+            </article>
+
+
         </section>
     </main>
 
 
-    <footer>
+    <footer id="contacto">
         <p>2026 - Portafolio Web</p>
     </footer>
 </body>
