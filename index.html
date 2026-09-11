@@ -11,6 +11,7 @@
     <header class="header">
         <nav class="navbar">
             <a href="#" class="logo">
+                <span class="logo-dot"></span>
                 PORTAFOLIO
             </a>
 
@@ -38,52 +39,269 @@
             data-category="Proyectos de software"
             data-source="xml"
         >
+            <span class="section-badge">Portafolio grupal · 2026</span>
             <h1>NUESTROS PROYECTOS</h1>
+            <p class="section-subtitle">
+                Aplicaciones web desarrolladas en clase: gestión, educación,
+                reservas y más. Filtra por categoría y explora cada proyecto.
+            </p>
 
             <div class="projects-container">
                 <div class="filters">
+                    <button data-category="todos" class="filter-active">
+                        Todos
+                    </button>
+
                     <button data-category="Proyecto_1">
                         Proyecto 1
                     </button>
 
                     <button data-category="Proyecto_2">
-                        Proyecto_2
+                        Proyecto 2
                     </button>
 
                     <button data-category="Proyecto_3">
-                        Proyecto_3
+                        Proyecto 3
+                    </button>
+
+                    <button data-category="Proyecto_4">
+                        Proyecto 4
+                    </button>
+
+                    <button data-category="Proyecto_5">
+                        Proyecto 5
+                    </button>
+
+                    <button data-category="Proyecto_6">
+                        Proyecto 6
                     </button>
                 </div>
             </div>
 
+            <div class="projects-grid">
 
-            <article class="project-card">
-                <h2>APLICACIÓN WEB PARA POSGRADO</h2>
+                <article class="project-card project-featured" data-category="Proyecto_1">
+                    <span class="project-number">01</span>
+                    <h2>APLICACIÓN WEB PARA POSGRADO</h2>
 
-                <div class="project-content">
-                    <div class="project-image">
-                        <img src="assets/images/Proyecto.jpeg" alt="Imagen del proyecto">
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="assets/images/Proyecto.jpeg" alt="Aplicación web de posgrado de contabilidad">
+                            <span class="project-status">Terminado</span>
+                        </div>
+
+                        <div class="project-info">
+
+                            <h3>CONTABILIDAD</h3>
+
+                            <p>
+                                Sistema web para gestionar matrículas, pagos y
+                                calificaciones del programa de posgrado de
+                                Contabilidad. Incluye panel administrativo,
+                                reportes en PDF y acceso por roles.
+                            </p>
+
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+
+                            <div class="project-meta">
+                                <span>🎓 Educación</span>
+                                <a class="project-link" href="#proyectos">Ver proyecto →</a>
+                            </div>
+
+                        </div>
                     </div>
+                </article>
 
-                    <div class="project-info">
+                <article class="project-card" data-category="Proyecto_2">
+                    <span class="project-number">02</span>
+                    <h2>SISTEMA DE INVENTARIO PYME</h2>
 
-                        <h3>CONTABILIDAD</h3>
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="assets/images/Proyecto.jpeg" alt="Sistema de inventario para pymes">
+                            <span class="project-status">Terminado</span>
+                        </div>
 
-                        <p>
-                            APLICACIÓN WEB PARA POSGRADO
-                        </p>
+                        <div class="project-info">
 
+                            <h3>STOCK CONTROL</h3>
+
+                            <p>
+                                Control de stock, entradas y salidas con alertas
+                                de stock mínimo. Dashboard con gráficos de ventas
+                                y kardex valorizado para pequeños negocios.
+                            </p>
+
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS Grid</span>
+                                <span class="project-tag">LocalStorage</span>
+                            </div>
+
+                            <div class="project-meta">
+                                <span>📦 Gestión</span>
+                                <a class="project-link" href="#proyectos">Ver proyecto →</a>
+                            </div>
+
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
+                <article class="project-card" data-category="Proyecto_3">
+                    <span class="project-number">03</span>
+                    <h2>PLATAFORMA DE CURSOS VIRTUALES</h2>
+
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="assets/images/Proyecto.jpeg" alt="Plataforma de cursos virtuales">
+                            <span class="project-status status-progress">En curso</span>
+                        </div>
+
+                        <div class="project-info">
+
+                            <h3>EDU VIRTUAL</h3>
+
+                            <p>
+                                Aula virtual con catálogo de cursos, reproductor
+                                de videos, quizzes interactivos y certificado
+                                automático al completar el 100% del curso.
+                            </p>
+
+                            <div class="project-tags">
+                                <span class="project-tag">Flexbox</span>
+                                <span class="project-tag">Responsive</span>
+                                <span class="project-tag">JS</span>
+                            </div>
+
+                            <div class="project-meta">
+                                <span>💻 E-learning</span>
+                                <a class="project-link" href="#proyectos">Ver proyecto →</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="Proyecto_4">
+                    <span class="project-number">04</span>
+                    <h2>APP DE RESERVAS PARA RESTAURANTE</h2>
+
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="assets/images/Proyecto.jpeg" alt="App de reservas para restaurante">
+                            <span class="project-status">Terminado</span>
+                        </div>
+
+                        <div class="project-info">
+
+                            <h3>RESERVA FÁCIL</h3>
+
+                            <p>
+                                Reserva de mesas en tiempo real, carta digital
+                                con fotos y confirmación por WhatsApp. Panel
+                                para el administrador con horarios y mesas.
+                            </p>
+
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">API WhatsApp</span>
+                            </div>
+
+                            <div class="project-meta">
+                                <span>🍽️ Reservas</span>
+                                <a class="project-link" href="#proyectos">Ver proyecto →</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="Proyecto_5">
+                    <span class="project-number">05</span>
+                    <h2>SISTEMA DE BIBLIOTECA UNIVERSITARIA</h2>
+
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="assets/images/Proyecto.jpeg" alt="Sistema de biblioteca universitaria">
+                            <span class="project-status status-progress">En curso</span>
+                        </div>
+
+                        <div class="project-info">
+
+                            <h3>BIBLIO UNI</h3>
+
+                            <p>
+                                Buscador de libros por autor, carrera y código,
+                                préstamos, devoluciones y multas. Ficha digital
+                                de cada libro con disponibilidad en vivo.
+                            </p>
+
+                            <div class="project-tags">
+                                <span class="project-tag">Grid</span>
+                                <span class="project-tag">Filtros JS</span>
+                                <span class="project-tag">XML</span>
+                            </div>
+
+                            <div class="project-meta">
+                                <span>📚 Biblioteca</span>
+                                <a class="project-link" href="#proyectos">Ver proyecto →</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="Proyecto_6">
+                    <span class="project-number">06</span>
+                    <h2>PORTAL DE EMPLEO UNIVERSITARIO</h2>
+
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="assets/images/Proyecto.jpeg" alt="Portal de empleo universitario">
+                            <span class="project-status status-new">Nuevo</span>
+                        </div>
+
+                        <div class="project-info">
+
+                            <h3>MI PRIMER EMPLEO</h3>
+
+                            <p>
+                                Bolsa de trabajo para estudiantes: publicar
+                                ofertas, postular con CV, filtrar por carrera y
+                                modalidad presencial o remota. Diseño 100%
+                                responsive.
+                            </p>
+
+                            <div class="project-tags">
+                                <span class="project-tag">Responsive</span>
+                                <span class="project-tag">Cards UI</span>
+                                <span class="project-tag">Formularios</span>
+                            </div>
+
+                            <div class="project-meta">
+                                <span>💼 Empleos</span>
+                                <a class="project-link" href="#proyectos">Ver proyecto →</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+
+            </div>
 
         </section>
     </main>
 
 
-    <footer id="contacto">
-        <p>2026 - Portafolio Web</p>
+    <footer id="contacto" class="footer">
+        <p class="footer-title">¿Tienes un proyecto en mente?</p>
+        <p class="footer-text">Escríbenos: <a class="footer-link" href="mailto:contacto@portafolio.edu">contacto@portafolio.edu</a></p>
+        <p class="footer-copy">2026 - Portafolio Web · Hecho en clase</p>
     </footer>
 </body>
 </html>
